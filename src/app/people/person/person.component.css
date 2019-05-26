@@ -1,0 +1,31 @@
+article {
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+span {
+  width: 40%;
+}
+
+label {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: cornsilk;
+  padding: 0.2rem 0.5rem;
+  margin-right: 1rem;
+}
+
+button {
+  color: white;
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+button:focus {
+  outline: 0;
+}

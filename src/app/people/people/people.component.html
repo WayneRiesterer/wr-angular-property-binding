@@ -1,0 +1,5 @@
+<p>The data in this section has been passed as an array from AppComponent to PeopleComponent.</p>
+<p>PeopleComponent then passes the first object of this array to PersonComponent.</p>
+<p>When the name is changed, the changes can be seen reflected all the way back in AppComponent.</p>
+<p>The reason for this is because people[0] provides an object reference.</p>
+<app-person [person]="people[0]"></app-person>

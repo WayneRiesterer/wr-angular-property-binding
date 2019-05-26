@@ -1,0 +1,35 @@
+<h1>Communicating Between Components</h1>
+<hr>
+<div class="container">
+	<section class="card">
+    <h2>Passing Array of Objects</h2>
+		<app-people [people]="people"></app-people>
+		<section class="card">
+			<h3>AppComponent State Values</h3>
+			<p>Name: {{ people[0].name }}, Age: {{ people[0].age }}</p>
+		</section>
+	</section>
+  <hr>
+  <section class="card">
+    <h2>Passing Single Object</h2>
+    <p>The data in this section is passed as a single object from AppComponent to PersonComponent.</p>
+    <p>Name changes here are also reflected back in AppComponent.</p>
+    <p>The reason for this is again due to the object being passed by reference.</p>
+    <app-person [person]="personObject"></app-person>
+    <section class="card">
+			<h3>AppComponent State Values</h3>
+			<p>Name: {{ personObject.name }}, Age: {{ personObject.age }}</p>
+		</section>
+  </section>
+  <hr>
+  <section class="card">
+    <h2>Passing Primitive Values</h2>
+    <p>The data in this section is passed as primitive values from AppComponent to PersonPrimitiveComponent.</p>
+    <p>Name changes in this case are <strong>not</strong> propagated back to AppComponent as they are passed by value and not by reference.</p>
+    <app-person-primitive [name]="name" [age]="age"></app-person-primitive>
+    <section class="card">
+			<h3>AppComponent State Values</h3>
+      <p>Name: {{ name }}, Age: {{ age }}</p>
+		</section>
+  </section>
+</div>
